@@ -1,0 +1,31 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+<div class="chapter" id="ex1">
+      <h3 align="center">Chapter 1 - Exercises</h5>
+      <p>In order to begin articulating these values, think through these questions. Write as much as you can. Think of these as prompts to get you going. Write full paragraphs if you want. It asks the same question in many different ways to get you to think about values from many different angles. The answers to these questions will help point to the answer. </p>
+    <div class="field center">
+      <label class="question">What fantasy are you? People shop because they want to be a different version of themselves. Your product is the first step on the road to version of themselves that is more:</label><br />
+      <span class="answer"><%= f.text_area :q1, autofocus: true, cols: "30", rows: "2" %></span>
+    </div>
+
+    <div class="field center">
+      <label class="question">We make ____ because we believe _____ should be ____, ____, and _____ to ___these people.</label><br />
+      <span class="answer"><%= f.text_field :q2, autofocus: true %></span>
+    </div>
+    <div class="field center">
+      <label class="question">Your product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. You make something that is a remedy for people who unfortunately feel </label>
+      <span class="answer"><%= f.text_field :q3, autofocus: true %></span>
+    </div>
+     <div class="field center">
+      <label class="question">Our customers come to us because they want to feel </label>
+      <span class="answer"><%= f.text_field :q4, autofocus: true %></span>.
+    </div>
+     <div class="field center">
+      <label class="question">We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more </label>
+      <span class="answer"><%= f.text_field :q5, autofocus: true %></span>.
+    </div>
+    <div class="center">
+    <a align="center" href="#chapter2" class="btn btn-primary btn-lg">Continue to Chapter 2</a>
+    </div>
+  </div>
+  <% end %>

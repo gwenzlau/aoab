@@ -1,0 +1,59 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+<div class="chapter" id="ex2">
+      <h3 align="center">Chapter 2 - Exercises</h5>
+  
+
+ <div class="field center">
+      <label class="question">Build a list of your 3 chief values:<br>
+      <label>We value</label>
+      <span class="answer"><%= f.text_field :q6a, autofocus: true %></span>,
+
+      <span class="answer"><%= f.text_field :q6b, autofocus: true %></span>, and
+
+      <span class="answer"><%= f.text_field :q6c, autofocus: true %></span>.</label>
+    </div>
+
+    <div class="field center">
+      <label class="question">How is business done today and what is wrong with it?</label><br><small>(Build a list of anti-values that conflict with your answers to the previous question.)</small><br />
+      <span class="answer"><%= f.text_area :q8, autofocus: true, cols: "30", rows: "2" %></span>
+    </div>
+
+    <div class="field center">
+      <label class="question">That’s why we started this.<br>
+How does what you are creating answer the conflict?</label><br />
+      <span class="answer"><%= f.text_area :q9, autofocus: true, cols: "30", rows: "2" %></span>
+    </div>
+
+    <div class="field center">
+      <label class="question">Who is your villain?</label><br><small>(Be specific. Name a company or two.)</small><br />
+      <span class="answer"><%= f.text_area :q10, autofocus: true, cols: "30", rows: "1" %></span>
+    </div>
+
+    <div class="field center">
+      <label class="question">What is at stake in your battle? And what is your super power that will let you save the day?</label><br />
+      <span class="answer"><%= f.text_area :q11, autofocus: true, cols: "30", rows: "2" %></span>
+    </div>
+
+    <div class="field center">
+      <label class="question">Tell your product story: How have you imbued your product with your values?
+What tangible things have you done? </label><br><small>Be specific. (Is it where you produced it? Is it low margins? Is it high cost to donate profit? Is it having fewer SKUs? Minimal design?)</small><br />
+      <span class="answer"><%= f.text_area :q12, autofocus: true, cols: "30", rows: "2" %></span>
+    </div>
+
+    <div class="field center">
+      <label class="question">Recap the history of your industry that led up to this fork in the road.</label><br><small>(It is the bottom of the ninth... they bring you in because you were born for this moment.)</small><br />
+      <span class="answer"><%= f.text_area :q13, autofocus: true, cols: "30", rows: "2" %></span>
+    </div>
+
+    <div class="field center">
+      <label class="question">What do people care about today more than anything? How does your company deliver on that better than anyone? And why are you uniquely situated to answer this?
+</label><br><small>This is the sunset question. (Many artists paint sunsets...) You don’t need to be first - you just need to be the best at explaining yourself.</small><br />
+      <span class="answer"><%= f.text_area :q14, autofocus: true, cols: "30", rows: "2" %></span>
+    </div>
+ <div class="center">
+    <a align="center" href="#chapter3" class="btn btn-primary btn-lg">Continue to Chapter 3</a>
+    </div>
+
+</div>
+<% end %>

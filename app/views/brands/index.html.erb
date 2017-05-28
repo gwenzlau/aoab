@@ -1,0 +1,14 @@
+<div class="container">
+<h1 align="center">Anatomy of all brands</h1>
+<%= render @brands %>
+
+<div class="pre-footer center">
+	<% unless brand_signed_in? %>
+
+<%= link_to "Create the Anatomy of your brand", new_brand_registration_path, class: "btn btn-default btn-lg" %>
+
+<% else %>
+<%= link_to "Edit your brand", edit_brand_registration_path, class: "btn btn-default btn-lg" %>
+<% end %>
+</div>
+</div>

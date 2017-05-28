@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Anatomy of a Brand</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= render 'layouts/header' %>
-  	 <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-    <%= yield %>
-
-  </body>
-</html>
-<script>
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -38,7 +19,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 900, function() {
+        }, 1000, function() {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
@@ -53,4 +34,3 @@ $('a[href*="#"]')
       }
     }
   });
-</script>

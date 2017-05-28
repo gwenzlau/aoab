@@ -1,0 +1,86 @@
+<div class="container">
+<h2>Edit the Anatomy of your brand</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+<div class="field">
+    <label class="question">Your brand name</label><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  
+<div class="field">
+    <label class="question">What fantasy are you? People shop because they want to be a different version of themselves. Your product is the first step on the road to version of themselves that is more:</label>
+    <%= f.text_field :q1, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <label class="question">We make ____ because we believe _____ should be ____, ____, and _____ to ___these people.</label><br />
+    <%= f.text_field :q2, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <label class="question">Your product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. You make something that is a remedy for people who unfortunately feel...</label><br />
+    <%= f.text_field :q3, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <label class="question">Our customers come to us because they want to feel...</label><br />
+    <%= f.text_field :q4, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <label class="question">We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...</label><br />
+    <%= f.text_field :q5, autofocus: true %>
+  </div>
+
+  <h3 align="center">Ch. 3 Names</h3>
+   <div class="field ">
+      <label class="question">Build a list of your 3 chief values:<br>
+      <label>We value</label>
+      <span class="answer"><%= f.text_field :q6a, autofocus: true %></span>,
+
+      <span class="answer"><%= f.text_field :q6b, autofocus: true %></span>, and
+
+      <span class="answer"><%= f.text_field :q6c, autofocus: true %></span>.</label>
+    </div>
+<hr><hr>
+  <div class="field">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>
+</div>
