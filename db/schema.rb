@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528022648) do
+ActiveRecord::Schema.define(version: 20170528140912) do
 
 # Could not dump table "brands" because of following StandardError
-#   Unknown type 'description' for column 'q1'
+#   Unknown type '' for column 'q2'
 
   create_table "views", force: :cascade do |t|
     t.string "email", default: "", null: false
