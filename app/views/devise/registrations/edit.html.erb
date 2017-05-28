@@ -1,86 +1,246 @@
-<div class="container">
-<h2>Edit the Anatomy of your brand</h2>
+<%= render "/pages/sidenavshow" %>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-<div class="field">
-    <label class="question">Your brand name</label><br />
-    <%= f.text_field :name, autofocus: true %>
+<div class="field ">
+    <h1 align="center" class="yourtitle" >The Anatomy of: 
+    <%= f.text_field :name, autofocus: true %></h1 >
   </div>
-  
-<div class="field">
-    <label class="question">What fantasy are you? People shop because they want to be a different version of themselves. Your product is the first step on the road to version of themselves that is more:</label>
-    <%= f.text_field :q1, autofocus: true %>
+  <br>
+    <div class="field center">
+    <label>Your email:
+    <%= f.email_field :email, autofocus: true %></label>
   </div>
+ <div class="chapter">
+  <div id="chapter1">
+    <h2 align="center" class="title">Our Values</h2>
+      <div class="field">
+        <label class="question">What fantasy are you? People shop because they want to be a different version of themselves. Your product is the first step on the road to version of themselves that is more:</label>
+        <%= f.text_field :q1, autofocus: true %>
+      </div>
 
-  <div class="field">
-    <label class="question">We make ____ because we believe _____ should be ____, ____, and _____ to ___these people.</label><br />
-    <%= f.text_field :q2, autofocus: true %>
-  </div>
+      <div class="field">
+        <label class="question">We make ____ because we believe _____ should be ____, ____, and _____ to ___these people.</label><br />
+        <%= f.text_field :q2, autofocus: true %>
+      </div>
 
-  <div class="field">
-    <label class="question">Your product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. You make something that is a remedy for people who unfortunately feel...</label><br />
-    <%= f.text_field :q3, autofocus: true %>
-  </div>
+      <div class="field">
+        <label class="question">Your product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. You make something that is a remedy for people who unfortunately feel...</label><br />
+        <%= f.text_field :q3, autofocus: true %>
+      </div>
 
-  <div class="field">
-    <label class="question">Our customers come to us because they want to feel...</label><br />
-    <%= f.text_field :q4, autofocus: true %>
-  </div>
+      <div class="field">
+        <label class="question">Our customers come to us because they want to feel...</label><br />
+        <%= f.text_field :q4, autofocus: true %>
+      </div>
 
-  <div class="field">
-    <label class="question">We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...</label><br />
-    <%= f.text_field :q5, autofocus: true %>
-  </div>
+      <div class="field">
+        <label class="question">We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...</label><br />
+        <%= f.text_field :q5, autofocus: true %>
+      </div>
+   </div>
+    <div id="chapter2">
+      <h2 align="center" class="title">Our Story</h2>
+       <div class="field ">
+          <label class="question">Build a list of your 3 chief values:<br>
+          <label>We value</label>
+          <span class="answer"><%= f.text_field :q6a, autofocus: true %></span>,
 
-  <h3 align="center">Ch. 3 Names</h3>
-   <div class="field ">
-      <label class="question">Build a list of your 3 chief values:<br>
-      <label>We value</label>
-      <span class="answer"><%= f.text_field :q6a, autofocus: true %></span>,
+          <span class="answer"><%= f.text_field :q6b, autofocus: true %></span>, and
 
-      <span class="answer"><%= f.text_field :q6b, autofocus: true %></span>, and
+          <span class="answer"><%= f.text_field :q6c, autofocus: true %></span>.</label>
+        </div>
 
-      <span class="answer"><%= f.text_field :q6c, autofocus: true %></span>.</label>
+        <div class="field ">
+          <label class="question">How is business done today and what is wrong with it?<br><small>(Build a list of anti-values that conflict with your answers to the previous question.)</small><br />
+          <span class="answer"><%= f.text_area :q8, autofocus: true, rows: "2" %></span></label>
+        </div>
+
+        <div class="field ">
+          <label class="question">That’s why you started <%= @brand.name %>. How does what you are creating answer the conflict?<br />
+          <span class="answer"><%= f.text_area :q9, autofocus: true, rows: "2" %></span></label>
+        </div>
+
+        <div class="field ">
+          <label class="question">Who is your villain?<br><small>(Be specific. Name a company or two.)</small><br />
+          <span class="answer"><%= f.text_area :q10, autofocus: true, rows: "1" %></span></label>
+        </div>
+
+        <div class="field ">
+          <label class="question">What is at stake in your battle? And what is your super power that will let you save the day?<br />
+          <span class="answer"><%= f.text_area :q11, autofocus: true, rows: "2" %></span></label>
+        </div>
+
+        <div class="field ">
+          <label class="question">Tell your product story: How have you imbued your product with your values?
+        What tangible things have you done? <br><small>Be specific. (Is it where you produced it? Is it low margins? Is it high cost to donate profit? Is it having fewer SKUs? Minimal design?)</small><br />
+          <span class="answer"><%= f.text_area :q12, autofocus: true, rows: "2" %></span></label>
+        </div>
+
+        <div class="field ">
+          <label class="question">Recap the history of your industry that led up to this fork in the road.<br><small>(It is the bottom of the ninth... they bring you in because you were born for this moment.)</small><br />
+          <span class="answer"><%= f.text_area :q13, autofocus: true, rows: "2" %></span></label>
+        </div>
+        <div class="field ">
+          <label class="question">What do people care about today more than anything? How does your company deliver on that better than anyone? And why are you uniquely situated to answer this?
+       <br><small>This is the sunset question. (Many artists paint sunsets...) You don’t need to be first - you just need to be the best at explaining yourself.</small><br />
+          <span class="answer"><%= f.text_area :q14, autofocus: true, rows: "2" %></span></label>
+        </div>
     </div>
-<hr><hr>
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <div id="chapter3">
+        <h2 align="center" class="title">Our Name</h2>
+          <div class="field center">
+            <label class="question">What is the descriptive part of your name?<br><small>
+List as many as you can think of (and feel free to use a thesaurus).</small><br>
+            <span class="answer"><%= f.text_field :q15, autofocus: true %></span></label>
+       </div>
+       <div class="field center">
+            <label class="question">What are the emotive parts of your name?<br><small>
+List as many as you can think of (and feel free to use a thesaurus).</small><br>
+            <span class="answer"><%= f.text_field :q16, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+          <label class="question">Now, start stringing them together until you find a combination that captures the crux of your brand promise.</label><br>
+          <span class="answer"><%= f.text_field :q17, autofocus: true, cols: "30", rows: "2" %></span>
+        </div> 
+      </div>
+      <div id="chapter4">
+        <h2 align="center" class="title">Our Visuals</h2>
+          <div class="field center">
+            <label class="question">What values does your name communicate?<br><small>
+      Does the sound of the name make the audience feel what you want them to feel?</small><br>
+            <span class="answer"><%= f.text_field :q18, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+            <label class="question">What are some of the natural characteristics in your name?<br><small>
+      Are there any repeated letters or sounds? Anything unique such as symbols, numbers, foreign or made up words?  If it is a shape or a letter, how can it be accentuated to visualize your values or product or industry?</small><br>
+            <span class="answer"><%= f.text_field :q19, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+            <label class="question">What else do you notice at the interplay between your name, your values, your industry or product? Is there a tension? Is there a complementarity?<br><small>
+      How can you accentuate this eccentricity?</small><br>
+            <span class="answer"><%= f.text_field :q20, autofocus: true %></span></label>
+       </div>
+      </div>
+      <div id="chapter5">
+        <h2 align="center" class="title">Our Content</h2>
+         <div class="field center">
+            <label class="question">In the context of other brands in our category, we are the
+            <span class="answer"><%= f.text_field :q21, autofocus: true %></span> one.</label>
+       </div>
+       <div class="field center">
+           <label class="question">We are like <span class="answer"><%= f.text_field :q22a, autofocus: true, placeholder: "insert competitor" %></span> but more
+            <span class="answer"><%= f.text_field :q22, autofocus: true %></span>.</label>
+       </div>
+       <div class="field center">
+            <label class="question">What role do you play as a boardroom member advising your customer?<br><small>You are the one who advises them on:</small><br>
+            <span class="answer"><%= f.text_field :q23, autofocus: true %></span></label>
+       </div>
+       <div class="field center">
+            <label class="question">What is your expertise in an adjective?<br><small>
+      You are an expert in being:</small><br>
+            <span class="answer"><%= f.text_field :q24, autofocus: true %></span></label>
+       </div>
+       <div class="field center">
+            <label class="question">Your customer hangs out with you because you make them more:
+            <span class="answer"><%= f.text_field :q25, autofocus: true %></span>.</label>
+       </div>
+       <div class="field center">
+            <label class="question">What are some topics (beyond your brand or product) that you are both interested in?<br>
+            <span class="answer"><%= f.text_field :q26, autofocus: true %></span></label>
+       </div>
+
+      </div>
+      <div id="chapter6">
+        <h2 align="center" class="title">Our Digital</h2>
+          <div class="field ">
+            <label class="question">Once upon a time there was a (target customer-type). They were (characteristics) but they were missing something. Long have they been searching for a
+            <span class="answer"><%= f.text_field :q27, autofocus: true %></span> because they hoped that would make them feel <span class="answer"><%= f.text_field :q28, autofocus: true %></span>.</label>
+       </div>
+       <div class="field ">
+            <label class="question">Just when they were about to give up all hope, just when they thought they would never find it.. you came along. <br><br>
+            You satisfy their search by vanquishing <span class="answer"><%= f.text_field :q30, autofocus: true %> </span>
+            
+            and giving them an experience that is <span class="answer"><%= f.text_field :q31, autofocus: true %></span>.
+          </label>
+       </div>
+       <div class="field center">
+            <label class="question">What concrete things will communicate the parts of your product that address your customer’s pain points?<small>This can be illustrations, specific pages, or features like liveChat.)</small><br>
+            <span class="answer"><%= f.text_field :q32, autofocus: true %></span>.</label>
+       </div>
+       <div class="field center">
+            <label class="question">How does the online experience reiterate your values?<br>
+            <span class="answer"><%= f.text_field :q33, autofocus: true %></span>.</label>
+       </div>
+       <div class="field center">
+            <label class="question">What are the last lingering questions in the mind of your customers that you can answer to guide them to the finish line?<br>
+            <span class="answer"><%= f.text_field :q34, autofocus: true %></span>.</label>
+       </div>
+       <div class="field center">
+            <label class="question">A normal category for an apparel company is tops, bottoms, outerwear. What are other, more relevant or engaging ways of categorizing your products?
+            <br><small>(Color, cost, place of origin, time of day, activity, material?)</small><br>
+            <span class="answer"><%= f.text_field :q35, autofocus: true %></span>.</label>
+       </div>
+      </div>
+        <div id="chapter7">
+          <h2 align="center" class="title">Our Packaging</h2>
+            <div class="field center">
+            <label class="question">How do you want your customers to describe the experience of receiving and opening your package?<br>
+            <span class="answer"><%= f.text_field :q36, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+            <label class="question">What materials can you use to get them to feel this?<br>
+            <span class="answer"><%= f.text_field :q37, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+            <label class="question">Describe the unboxing moment.<br>
+            <small>List the steps in the process (from receiving to seeing the product)</small><br>
+            <span class="answer"><%= f.text_field :q38, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+            <label class="question">What elements, items, or materials can you add to build anticipation?<br>
+            <span class="answer"><%= f.text_field :q39, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+            <label class="question">What can you include in the packaging to make it share-able?<br><small>(Can you include some specific physical item or idea they will pass on to at least one friend)?</small>
+            <span class="answer"><%= f.text_field :q40, autofocus: true %></span></label>
+       </div>
+        <div class="field center">
+            <label class="question">How does this process play into satisfying the fantasy and remind them that you are helping them be the person they want to be?<br>
+            <span class="answer"><%= f.text_field :q41, autofocus: true %></span></label>
+       </div> 
+      </div>
+  </div>
+<hr>
+  <div class="field center ">
+    <label>Create a new password: 
     <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+  </label>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="field center">
+    <label>Confirm your new password:
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></label>
+  </div>
+  <br><br><br>
+<span class="save-container center">
+  <div class="field center">
+    <label>Enter your current password to save
+    <%= f.password_field :current_password, autocomplete: "off" %></label>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <div class="actions center">
+    <%= f.submit "Update", class: "btn btn-primary" %>
   </div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
-</div>
+  </span>
+<h3>Delete my profile</h3>
+<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>

@@ -1,114 +1,210 @@
-<ul>
-	<h1 align="center">The Anatomy of <%= @brand.name %></h1>
-
-		<li>
+<div class="jumbotron">
+	<h1 align="center" >The Anatomy of <%= @brand.name %></h1>
+</div>
+<div class="chapter">
+		<div id="chapter1">
+			<h2 align="center" class="title">Our Values</h2>
 			<p class="question">
-				What fantasy are you? People shop because they want to be a different version of themselves. Your product is the first step on the road to version of themselves that is more:
-			</p>
-			<p class="answer">	
-			<%= @brand.q1 %>
-			</p>
-		</li>
-
-		<li>
+				What fantasy are we? People shop here because they want to be a different version of themselves. Our product is the first step on the road to version of themselves that is more <span class="answer"><%= @brand.q1 %>
+			</span>.
 			<p class="question">
 				We make ____ because we believe _____ should be ____, ____, and _____ to ___these people.
 			</p>
 			<p class="answer">
 			<%= @brand.q2 %>
 			</p>
-		</li>
-
-
-		<li>
 			<p class="question">
-				Your product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. You make something that is a remedy for people who unfortunately feel...
-			</p>
-			<p class="answer">
+				Our product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. We make something that is a remedy for people who unfortunately feel <span class="answer">
 			<%= @brand.q3 %>
-			</p>
-		</li>
-		<li>
+			</span>.
 			<p class="question">
-				Our customers come to us because they want to feel...
-			</p>
-			<p class="answer">
+				Our customers come to us because they want to feel <span class="answer">.
 			<%= @brand.q4 %>
-			</p>
-		</li>
-		<li>
+			</span>
 			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q5 %>
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q6a %>, <%= @brand.q6b %>, and <%= @brand.q6c %>.
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q8 %>
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q9 %>
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q10 %>
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q11 %>
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q12 %>
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q13 %>
-			</p>
-		</li>
-		<li>
-			<p class="question">
-				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more...
-			</p>
-			<p class="answer">
-			<%= @brand.q14 %>
-			</p>
-		</li>
+				We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more
+			<span class="answer">
+			<%= @brand.q5 %>.
+			</span>
+	</div>
+	<div id="chapter2">
+		<h2 align="center" class="title">Our Story</h2>
+		<label>We value<span class="answer"> <%= @brand.q6a %></span>,
+      <span class="answer"><%= @brand.q6b %></span>, and
+      <span class="answer"><%= @brand.q6c %></span>.</label>
+<br><br>
+       <label class="question">What is wrong with business today:</label><br>
+      <span class="answer"><%= @brand.q8 %></span>
+<br><br>
+		<label class="question">
+			That’s why we started <%= @brand.name %>.<br>
+		<span class="answer"><%= @brand.q9 %></span></label>
+		<br><br>
+		<label class="question">
+			Who is our villain?
+		<br>
+		<span class="answer"><%= @brand.q10 %></span></label>
+		<br><br>
+		<label class="question">
+			This is what is at stake in our battle. But we have a super power that will help us succeed.<br>
+		<span class="answer"><%= @brand.q11 %></span></label>
+		<br><br>
+		<label class="question">
+			This is our product story: We have done tangible things to imbue our product with our values.<br>
+		<span class="answer"><%= @brand.q12 %></span></label>
+		<br><br>
+		<label class="question">
+		The history of our industry that led to this fork in the road. We were born for this moment.<br>
+		<span class="answer"><%= @brand.q13 %></span>
+		</label>
+		<br><br>
+		<label class="question">
+		What do people care about today more than anything? We deliver on that better than anyoneelse. We are uniquely situated to answer this because...<br>
+		<span class="answer"><%= @brand.q14 %></span></label>
+		<br><br>
+	</div>
+		<div id="chapter3">
+		<h2 align="center" class="title">Our Name</h2>
+			<label class="question">
+			These are the descriptive parts of our name:
+			<br>
+			<span class="answer"><%= @brand.q15 %></span></label>
+		<br><br>
+		<label class="question">
+			These are the emotive parts of our name:
+			<br>
+			<span class="answer"><%= @brand.q16 %></span></label>
+		<br><br>
+		<label class="question">
+			This is the relationship between those two sides of our name:
+			<br>
+			<span class="answer"><%= @brand.q17 %></span></label>
+		<br><br>
+	</div>
+		<div id="chapter4">
+		<h2 align="center" class="title">Our Visuals</h2>
+		<label class="question">
+		What values does our name communicate?
+			</label><br>
+			<span class="answer"><%= @brand.q18 %></span>
+		<br><br>
+		<label class="question">
+			These are some of the natural characteristics in our name and how it can be accentuated to visualize our values or product or industry:
+			</label>
+			<span class="answer"><%= @brand.q19 %></span>
+		<br><br>
+		<label class="question">
+		Another thing to notice about the interplay between our name, oour values, our industry or products is:
+			</label>
+			<span class="answer"><%= @brand.q20 %></span>
+		<br><br>
+	</div>
+		<div id="chapter5">
+		<h2 align="center" class="title">Our Content</h2>
+			<label class="question">
+		In the context of other brands in our category, we are the
+			</label>
+			<span class="answer"><%= @brand.q21 %></span>.
+		<br><br>
+			<label class="question">
+			We are like 
+			</label>
+			<span class="answer"><%= @brand.q22a %></span>
+			<label class="question">
+			but more
+			</label>
+			<span class="answer"><%= @brand.q22 %></span>
+		<br><br>
+			<label class="question">
+		As a boardroom member advising our customer, we are the one who advises them on:
+			</label>
+			<span class="answer"><%= @brand.q23 %></span>
+		<br><br>
+			<label class="question">
+			Our expertise in an adjective is:
+			</label>
+			<span class="answer"><%= @brand.q24 %></span>
+		<br><br>
+			<label class="question">
+			Our customer hangs out with us because we make them more
+			</label>
+			<span class="answer"><%= @brand.q25 %></span>
+		<br><br>
+			<label class="question">
+			Some topics (beyond our brand or product) that we are both interested in are:
+			</label>
+			<span class="answer"><%= @brand.q26 %></span>
+		<br><br>
+	</div>
+		<div id="chapter6">
+		<h2 align="center" class="title">Our Digital Journey</h2>
+		<label class="question">
+			Once upon a time there was a potential customer in pain. They were looking for a solution but they were missing something. Long have they been searching for a <span class="answer"><%= @brand.q27 %></span>
+			because they hoped that would make them feel
+			<span class="answer"><%= @brand.q28 %></span>.
+			<br><br>
+			<label>Just when they were about to give up all hope, just when they thought they would never find it.. you came along.</label>
+		<br><br>
+		<label class="question">
+			We satisfy their search by vanquishing
+			</label>
+			<span class="answer"><%= @brand.q30 %></span>
+		<label class="question">
+			and giving them an experience that is 
+			</label><span class="answer"> <%= @brand.q31 %></span>.
+			<br><br>
+		<label class="question">
+			 The concrete things that address our customer’s pain points are:
+			<span class="answer"><%= @brand.q32 %></span>.
+		<br><br>
+		<label class="question">
+			The online experience reiterates our values by...
+			</label>
+			<span class="answer"><%= @brand.q33 %></span>
+		<br><br>
+		<label class="question">
+			 There are a few, last lingering questions in the mind of our customers that we can answer in these ways:
+			</label>
+			<span class="answer"><%= @brand.q34 %></span>
+		<br><br>
+		<label class="question">
+			 A normal category for an apparel company is tops, bottoms, outerwear. But we organize our experience by thinking about the mindset of our customer and our goods in the context their life.
+			</label>
+			<span class="answer"><%= @brand.q35 %></span>
+		<br><br>
+	</div>
+	<div id="chapter7">
+		<h2 align="center" class="title">Our Packaging</h2>
 
-
-
-	</ul>
+				<label class="question">
+			 This is how we want our customers to describe the experience of receiving and opening our package:
+			</label>
+			<span class="answer"><%= @brand.q36 %></span>
+		<br><br>
+			<label class="question">
+			  The materials we use to get them to feel this are:
+			</label>
+			<span class="answer"><%= @brand.q37 %></span>
+		<br><br>
+				<label class="question">
+			 This is our unboxing moment:
+			</label>
+			<span class="answer"><%= @brand.q38 %></span>
+		<br><br>
+				<label class="question">
+			 We include these elements, items, or materials to build anticipation:
+			</label>
+			<span class="answer"><%= @brand.q39 %></span>
+		<br><br>
+			<label class="question">
+			 We include these elements in the packaging to make it share-able:
+			</label>
+			<span class="answer"><%= @brand.q40 %></span>
+		<br><br>
+			<label class="question">
+	 		This is how the packaging experience plays into satisfying the fantasy we are and reminds our customer that we are helping them be the person they want to be:
+			</label>
+			<span class="answer"><%= @brand.q41 %></span>
+		<br><br>
+	</div>
+</div>

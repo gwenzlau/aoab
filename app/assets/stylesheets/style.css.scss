@@ -7,7 +7,7 @@
 	outline:none;
 }
 textarea {
-	width: 80%;
+	width: 100%;
 	border-top: none;
     border-left: none;
     border-right: none;
@@ -19,6 +19,9 @@ p, label {
 	font-weight: 300;
 	font-size: 18px;
 	letter-spacing: 1px;
+}
+h1 {
+	font-weight:300;
 }
 .label {
 	color:black;
@@ -34,6 +37,8 @@ p, label {
 .answer {
 	font-size:28px;
 	padding-bottom: 20px;
+	font-style: italic;
+    font-weight: 300;
 }
 
 .pre-footer {
@@ -47,8 +52,14 @@ p, label {
 	padding-left: 260px; 
 	padding-right: 260px;
 }
+.title {
+	padding-top:30px;
+}
 .exercises {
 
+}
+.yourtitle input {
+	text-align:center;
 }
 
 .center {
@@ -78,6 +89,30 @@ input:focus {
 ::placeholder {
 	color:lightgray;
 	}
+.btn {
+	border-radius: 0px;
+}
+.btn-primary {
+	background-color:black;
+	border-color: black;
+}
+.btn-primary:hover {
+	background-color:#5a5a5a;
+}
+
+.navbar-inner {
+	border-bottom: 1px solid lightgray;
+}
+.nav {
+	display: -webkit-inline-box;
+}
+.navbar-inner a {
+	padding: 10px;
+	color:black;
+}
+.nav .pull-right {
+	float: right;
+}
 
 .introduction-title {
 	padding-top: 50px;
@@ -105,4 +140,8 @@ input:focus {
 .save-container .field {
 	padding: 10px;
 	display: inline-flex;
+}
+
+.pw {
+	background-color: lightgray;
 }
