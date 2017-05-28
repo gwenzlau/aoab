@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
  protect_from_forgery with: :exception
  before_action :configure_permitted_parameters, if: :devise_controller?
 
+
 protected
 
  def configure_permitted_parameters
@@ -14,6 +15,16 @@ protected
    devise_parameter_sanitizer.permit(:account_update, keys: [:q1])
 	   devise_parameter_sanitizer.permit(:sign_up, keys: [:q2])
    devise_parameter_sanitizer.permit(:account_update, keys: [:q2])
+       devise_parameter_sanitizer.permit(:sign_up, keys: [:q2a])
+   devise_parameter_sanitizer.permit(:account_update, keys: [:q2a])
+       devise_parameter_sanitizer.permit(:sign_up, keys: [:q2b])
+   devise_parameter_sanitizer.permit(:account_update, keys: [:q2b])
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:q2c])
+   devise_parameter_sanitizer.permit(:account_update, keys: [:q2c])
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:q2d])
+   devise_parameter_sanitizer.permit(:account_update, keys: [:q2d])
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:q2e])
+   devise_parameter_sanitizer.permit(:account_update, keys: [:q2e])
       devise_parameter_sanitizer.permit(:sign_up, keys: [:q3])
    devise_parameter_sanitizer.permit(:account_update, keys: [:q3]) 
       devise_parameter_sanitizer.permit(:sign_up, keys: [:q4])

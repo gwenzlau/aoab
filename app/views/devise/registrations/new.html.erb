@@ -7,7 +7,7 @@
   <%= devise_error_messages! %>
   <div class="introduction-title center">
     <div class="field title yourtitle" align="center">
-      <h2 >This is the Anatomy of <%= f.text_field :name, autofocus: true, autocomplete: "off", placeholder: "your brand name here" %>.</h2>
+      <h2 >This is the Anatomy of <%= f.text_field :name, autofocus: false, autocomplete: "off", placeholder: "your brand name here" %>.</h2>
       <a align="center" href="#chapter1" class="btn btn-primary btn-lg scrollnext">&darr;</a>
     </div>
   </div>
@@ -80,28 +80,28 @@
       <h5 align="center">Chapter 1.</h5><h1 align="center">EXERCISES</h1><br><br>
       <p>In order to begin articulating these values, think through these questions. Write as much as you can. Think of these as prompts to get you going. Write full paragraphs if you want. It asks the same question in many different ways to get you to think about values from many different angles. The answers to these questions will help point to the answer. </p>
     <div class="field center">
-      <label class="question">What fantasy are you? People shop because they want to be a different version of themselves. Your product is the first step on the road to version of themselves that is more:</label><br />
-      <span class="answer"><%= f.text_area :q1, autofocus: true, cols: "30", rows: "2" %></span>
+      <label class="question">What fantasy are you? People shop because they want to be a different version of themselves. Your product is the first step on the road to version of themselves that is more:
+      <span class="answer"><%= f.text_area :q1, autofocus: false, cols: "30", rows: "2" %></span></label>
     </div>
 
     <div class="field center">
-      <label class="question">We make ____ because we believe _____ should be ____, ____, and _____ to ___these people.</label><br />
-      <span class="answer"><%= f.text_field :q2, autofocus: true %></span>
+      <label class="question">We make <span class="answer"><%= f.text_field :q2, autofocus: false, placeholder: "our product" %></span> because we believe <span class="answer"><%= f.text_field :q2a, autofocus: false, placeholder: "our type of product" %></span> should be <span class="answer"><%= f.text_field :q2b, autofocus: false, placeholder: "an adjective" %></span>, <span class="answer"><%= f.text_field :q2c, autofocus: false, autofocus: false, placeholder: "an adjective" %></span>, and <span class="answer"><%= f.text_field :q2d, autofocus: false, autofocus: false, placeholder: "an adjective" %></span> to <span class="answer"><%= f.text_field :q2e, autofocus: false, placeholder: "our audience" %></span> people.</label><br />
+      
     </div>
     <div class="field center">
-      <label class="question">Your product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. You make something that is a remedy for people who unfortunately feel </label>
-      <span class="answer"><%= f.text_field :q3, autofocus: true %></span>
+      <label class="question">Your product is a concrete remedy to something emotional or abstract that the customer is missing or lacking. You make something that is a remedy for people who unfortunately feel 
+      <span class="answer"><%= f.text_field :q3, autofocus: false %></span>.</label>
     </div>
      <div class="field center">
       <label class="question">Our customers come to us because they want to feel </label>
-      <span class="answer"><%= f.text_field :q4, autofocus: true %></span>.
+      <span class="answer"><%= f.text_field :q4, autofocus: false %></span>.
     </div>
      <div class="field center">
       <label class="question">We help people become a different version of themselves. When they think of a us and when they use our product, they finally feel more </label>
-      <span class="answer"><%= f.text_field :q5, autofocus: true %></span>.
+      <span class="answer"><%= f.text_field :q5, autofocus: false %></span>.
     </div>
     <div class="center">
-    <a align="center" href="#chapter2" class="btn btn-primary btn-lg">Continue to Chapter 2</a>
+    <a align="center" href="#chapter2" class="btn btn-primary btn-lg scrollnext">Continue to Chapter 2</a>
     </div>
   </div>
   <!-- END EX 1 -->
@@ -173,49 +173,49 @@ Great stories unify your abstract values and your physical creations to make the
  <div class="field center">
       <label class="question">Build a list of your 3 chief values:<br>
       <label>We value</label>
-      <span class="answer"><%= f.text_field :q6a, autofocus: true %></span>,
+      <span class="answer"><%= f.text_field :q6a, autofocus: false %></span>,
 
-      <span class="answer"><%= f.text_field :q6b, autofocus: true %></span>, and
+      <span class="answer"><%= f.text_field :q6b, autofocus: false %></span>, and
 
-      <span class="answer"><%= f.text_field :q6c, autofocus: true %></span>.</label>
+      <span class="answer"><%= f.text_field :q6c, autofocus: false %></span>.</label>
     </div>
 
     <div class="field center">
       <label class="question">How is business done today and what is wrong with it?</label><br><small>(Build a list of anti-values that conflict with your answers to the previous question.)</small><br />
-      <span class="answer"><%= f.text_area :q8, autofocus: true, cols: "30", rows: "2" %></span>
+      <span class="answer"><%= f.text_area :q8, autofocus: false, cols: "30", rows: "2" %></span>
     </div>
 
     <div class="field center">
       <label class="question">That’s why we started this.<br>
 How does what you are creating answer the conflict?</label><br />
-      <span class="answer"><%= f.text_area :q9, autofocus: true, cols: "30", rows: "2" %></span>
+      <span class="answer"><%= f.text_area :q9, autofocus: false, cols: "30", rows: "2" %></span>
     </div>
 
     <div class="field center">
       <label class="question">Who is your villain?</label><br><small>(Be specific. Name a company or two.)</small><br />
-      <span class="answer"><%= f.text_area :q10, autofocus: true, cols: "30", rows: "1" %></span>
+      <span class="answer"><%= f.text_area :q10, autofocus: false, cols: "30", rows: "1" %></span>
     </div>
 
     <div class="field center">
       <label class="question">What is at stake in your battle? And what is your super power that will let you save the day?</label><br />
-      <span class="answer"><%= f.text_area :q11, autofocus: true, cols: "30", rows: "2" %></span>
+      <span class="answer"><%= f.text_area :q11, autofocus: false, cols: "30", rows: "2" %></span>
     </div>
 
     <div class="field center">
       <label class="question">Tell your product story: How have you imbued your product with your values?
 What tangible things have you done? </label><br><small>Be specific. (Is it where you produced it? Is it low margins? Is it high cost to donate profit? Is it having fewer SKUs? Minimal design?)</small><br />
-      <span class="answer"><%= f.text_area :q12, autofocus: true, cols: "30", rows: "2" %></span>
+      <span class="answer"><%= f.text_area :q12, autofocus: false, cols: "30", rows: "2" %></span>
     </div>
 
     <div class="field center">
       <label class="question">Recap the history of your industry that led up to this fork in the road.</label><br><small>(It is the bottom of the ninth... they bring you in because you were born for this moment.)</small><br />
-      <span class="answer"><%= f.text_area :q13, autofocus: true, cols: "30", rows: "2" %></span>
+      <span class="answer"><%= f.text_area :q13, autofocus: false, cols: "30", rows: "2" %></span>
     </div>
 
     <div class="field center">
       <label class="question">What do people care about today more than anything? How does your company deliver on that better than anyone? And why are you uniquely situated to answer this?
 </label><br><small>This is the sunset question. (Many artists paint sunsets...) You don’t need to be first - you just need to be the best at explaining yourself.</small><br />
-      <span class="answer"><%= f.text_area :q14, autofocus: true, cols: "30", rows: "2" %></span>
+      <span class="answer"><%= f.text_area :q14, autofocus: false, cols: "30", rows: "2" %></span>
     </div>
  <div class="center">
     <a align="center" href="#chapter3" class="btn btn-primary btn-lg">Continue to Chapter 3</a>
@@ -226,8 +226,29 @@ What tangible things have you done? </label><br><small>Be specific. (Is it where
   <div id="chapter3" class="chapter">
     <h5 align="center">Chapter 3.</h5><h1 align="center">NAMES</h1><br><br>
     <p>
-    <span class="callout">There are two important things that your name must do.</span> It must be descriptive and it must be emotive. When you do this well there will be a unique feeling expressed by putting these two words together. There should be a novel juxtaposition created by this interplay. This juxtaposition is a boiled down way of communicating your value statement (why your company exists).  
+    <span class="callout">There are two important things that your name must do.</span> It must be descriptive and it must be emotive. When you do this well there will be a unique feeling expressed by putting these two words together. There should be a novel juxtaposition created by this interplay. This juxtaposition is a boiled down way of communicating your value statement (why your company exists).  <br><br>
+    The best process we know of for developing a strong brand name entails creating a Venn diagram. On one side, we list the descriptive elements. On the other side, there are the emotive elements. In the middle, we seek to find an interplay between these two sides. By combining these sides, we hope to capture our mission and purpose in a way that creates tension and familiarity.</p>
     <br><br>
+    <div class="venn center">
+    <div class="circle">
+        <p>
+            Descriptive
+        </p>
+    </div>
+
+    <div class="circle">
+        <p>
+            Emotive
+        </p>
+    </div>
+
+    <div class="joined" style="">
+        <p>
+            You
+        </p>
+    </div>
+</div>
+    <br><br><p>
     Take the example of Apple Computers. Two words. One word plays the role of the descriptor. The other word plays the role of the emotional agent. One word says what it is, the next puts a twist on it and says why it is different. There is an intriguing tension created by placing these words together. Computers are complex, cold, robotic, rigid, and unfeeling. Apples are natural, simple, relatable, and nourishing. But not only is this juxtaposition intriguing, engaging, and eye-catching— it is the value proposition of the company: to make computers simple and relatable.  This is what names do at their best. 
     <br><br>
     Over time the name Apple Computers has been shortened to simply Apple. But it still maintains the juxtaposition, intrigue, and bundled value statement of its former, longer self.  This is a lesson that will be repeated in each chapter: although each element of a brand must be woven together. <blockquote>When done well, individual elements can be separated, extracted, and shortened, and simplified- yet the full value of the brand will not be lost.</blockquote> <p>In fact, because the brand has been so deeply imbued in each element, reducing the individual aspects to more basic names or symbols increases the power of the brand.  
@@ -247,16 +268,16 @@ What tangible things have you done? </label><br><small>Be specific. (Is it where
        <div class="field center">
             <label class="question">What is the descriptive part of your name?<br><small>
 List as many as you can think of (and feel free to use a thesaurus).</small><br>
-            <span class="answer"><%= f.text_field :q15, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q15, autofocus: false %></span></label>
        </div>
        <div class="field center">
             <label class="question">What are the emotive parts of your name?<br><small>
 List as many as you can think of (and feel free to use a thesaurus).</small><br>
-            <span class="answer"><%= f.text_field :q16, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q16, autofocus: false %></span></label>
        </div>
         <div class="field center">
           <label class="question">Now, start stringing them together until you find a combination that captures the crux of your brand promise.</label><br>
-          <span class="answer"><%= f.text_field :q17, autofocus: true, cols: "30", rows: "2" %></span>
+          <span class="answer"><%= f.text_field :q17, autofocus: false, cols: "30", rows: "2" %></span>
         </div> 
 
        <div class="center">
@@ -314,17 +335,17 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
        <div class="field center">
             <label class="question">What values does your name communicate?<br><small>
       Does the sound of the name make the audience feel what you want them to feel?</small><br>
-            <span class="answer"><%= f.text_field :q18, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q18, autofocus: false %></span></label>
        </div>
         <div class="field center">
             <label class="question">What are some of the natural characteristics in your name?<br><small>
       Are there any repeated letters or sounds? Anything unique such as symbols, numbers, foreign or made up words?  If it is a shape or a letter, how can it be accentuated to visualize your values or product or industry?</small><br>
-            <span class="answer"><%= f.text_field :q19, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q19, autofocus: false %></span></label>
        </div>
         <div class="field center">
             <label class="question">What else do you notice at the interplay between your name, your values, your industry or product? Is there a tension? Is there a complementarity?<br><small>
       How can you accentuate this eccentricity?</small><br>
-            <span class="answer"><%= f.text_field :q20, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q20, autofocus: false %></span></label>
        </div>
      </div>
      <div class="center">
@@ -366,28 +387,28 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
 
        <div class="field center">
             <label class="question">In the context of other brands in our category, we are the
-            <span class="answer"><%= f.text_field :q21, autofocus: true %></span> one.</label>
+            <span class="answer"><%= f.text_field :q21, autofocus: false %></span> one.</label>
        </div>
        <div class="field center">
-           <label class="question">We are like <span class="answer"><%= f.text_field :q22a, autofocus: true, placeholder: "insert competitor" %></span> but more
-            <span class="answer"><%= f.text_field :q22, autofocus: true %></span>.</label>
+           <label class="question">We are like <span class="answer"><%= f.text_field :q22a, autofocus: false, placeholder: "insert competitor" %></span> but more
+            <span class="answer"><%= f.text_field :q22, autofocus: false %></span>.</label>
        </div>
        <div class="field center">
             <label class="question">What role do you play as a boardroom member advising your customer?<br><small>You are the one who advises them on:</small><br>
-            <span class="answer"><%= f.text_field :q23, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q23, autofocus: false %></span></label>
        </div>
        <div class="field center">
             <label class="question">What is your expertise in an adjective?<br><small>
       You are an expert in being:</small><br>
-            <span class="answer"><%= f.text_field :q24, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q24, autofocus: false %></span></label>
        </div>
        <div class="field center">
             <label class="question">Your customer hangs out with you because you make them more:
-            <span class="answer"><%= f.text_field :q25, autofocus: true %></span>.</label>
+            <span class="answer"><%= f.text_field :q25, autofocus: false %></span>.</label>
        </div>
        <div class="field center">
             <label class="question">What are some topics (beyond your brand or product) that you are both interested in?<br>
-            <span class="answer"><%= f.text_field :q26, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q26, autofocus: false %></span></label>
        </div>
      </div>
       <div class="center">
@@ -404,11 +425,7 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
       <br><br>
       <blockquote>You need to know the thought process of your customer better than they do themselves. This is how you guide them.</blockquote>
       <p>
-      For example, with Tinker Watches, one of the problems we were solving is the watch buying experience. Tinker Watches is targeted to a young audience that wants an elegant, timeless object but they don’t own one because they have been excluded by price or an overly opaque buying process. Many industries, like the watch industry, have a complex vocabulary built around them. This is partly on purpose to confuse the customer so they do not know what they are really getting, why they are paying so much, or when they are getting duped. The goal with Tinker was to fly in the face of that. All of these values were built into the brand and business strategy from day one. So buying a watch, for customers in our category, is about clarity, simplicity, control, and comfort.
-      <br><br>
-      The Tinker Watches user-interface mirrors this thought process. It makes the process of selecting, buying, and receiving a watch as simple and straight-forward as can be. It is a three step process: select the size, finish, and strap. That’s it. All of the watches have the same materials, quality, and price. In the mind of our customers this is refreshing. Before arriving to Tinker’s website, they have been frustrated and mired in complexity. They want a watch that looks good, works well, and doesn’t cost an arm and a leg. Finally they stumble on Tinkerwatches.com and see a friendly face. They are guided through a simple process. In a few seconds, they have a watch suited to their needs, it is in their cart, and they are ready to checkout.
-      <br><br>
-      This is what it means to understand the thought process of your customer. What are they looking for (experientially)? What has the journey been like? And how is your buying process serving their needs in ways others did not? How are you shepherding them to the finish line? If you can write it out in a step by step process this will help.
+      Understand the thought process of your customer. What are they looking for (experientially)? What has the journey been like? And how is your buying process serving their needs in ways others did not? How are you shepherding them to the finish line? If you can write it out in a step by step process this will help.
       <br><br>
       A bad example of an e-commerce experience is the way most websites handle it. Most websites organize their clothing by category: tops, bottoms, outerwear etc. This is a good and natural filter but it is not a very engaging way to satisfy the customer’s search. It only works to a point. The larger your site gets, the wider your product offering grows, the more overwhelming it is. Customers already have had to filter so many other brands and things to arrive at your shop, the filtering process should not feel like it is starting over again. This pushes brands to focus their offerings. Do one thing really well. Customers today want to shop this way. They want brands to be bite-size. They want to go to one place for one specific thing. They want shopping to be like an app.
       <br><br>
@@ -427,31 +444,31 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
       <p>Describe your customer’s journey.</p>
        <div class="field ">
             <label class="question">Once upon a time there was a (target customer-type). They were (characteristics) but they were missing something. Long have they been searching for a
-            <span class="answer"><%= f.text_field :q27, autofocus: true %></span> because they hoped that would make them feel <span class="answer"><%= f.text_field :q28, autofocus: true %></span>.</label>
+            <span class="answer"><%= f.text_field :q27, autofocus: false %></span> because they hoped that would make them feel <span class="answer"><%= f.text_field :q28, autofocus: false %></span>.</label>
        </div>
        <div class="field ">
             <label class="question">Just when they were about to give up all hope, just when they thought they would never find it.. you came along. <br><br>
-            You satisfy their search by vanquishing <span class="answer"><%= f.text_field :q30, autofocus: true %> </span>
+            You satisfy their search by vanquishing <span class="answer"><%= f.text_field :q30, autofocus: false %> </span>
             
-            and giving them an experience that is <span class="answer"><%= f.text_field :q31, autofocus: true %></span>.
+            and giving them an experience that is <span class="answer"><%= f.text_field :q31, autofocus: false %></span>.
           </label>
        </div>
        <div class="field center">
             <label class="question">What concrete things will communicate the parts of your product that address your customer’s pain points?<small>This can be illustrations, specific pages, or features like liveChat.)</small><br>
-            <span class="answer"><%= f.text_field :q32, autofocus: true %></span>.</label>
+            <span class="answer"><%= f.text_field :q32, autofocus: false %></span>.</label>
        </div>
        <div class="field center">
             <label class="question">How does the online experience reiterate your values?<br>
-            <span class="answer"><%= f.text_field :q33, autofocus: true %></span>.</label>
+            <span class="answer"><%= f.text_field :q33, autofocus: false %></span>.</label>
        </div>
        <div class="field center">
             <label class="question">What are the last lingering questions in the mind of your customers that you can answer to guide them to the finish line?<br>
-            <span class="answer"><%= f.text_field :q34, autofocus: true %></span>.</label>
+            <span class="answer"><%= f.text_field :q34, autofocus: false %></span>.</label>
        </div>
        <div class="field center">
             <label class="question">A normal category for an apparel company is tops, bottoms, outerwear. What are other, more relevant or engaging ways of categorizing your products?
             <br><small>(Color, cost, place of origin, time of day, activity, material?)</small><br>
-            <span class="answer"><%= f.text_field :q35, autofocus: true %></span>.</label>
+            <span class="answer"><%= f.text_field :q35, autofocus: false %></span>.</label>
        </div>
     </div>
      <div class="center">
@@ -495,28 +512,28 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
       <p>Describe your customer’s journey.</p>
        <div class="field center">
             <label class="question">How do you want your customers to describe the experience of receiving and opening your package?<br>
-            <span class="answer"><%= f.text_field :q36, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q36, autofocus: false %></span></label>
        </div>
         <div class="field center">
             <label class="question">What materials can you use to get them to feel this?<br>
-            <span class="answer"><%= f.text_field :q37, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q37, autofocus: false %></span></label>
        </div>
         <div class="field center">
             <label class="question">Describe the unboxing moment.<br>
             <small>List the steps in the process (from receiving to seeing the product)</small><br>
-            <span class="answer"><%= f.text_field :q38, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q38, autofocus: false %></span></label>
        </div>
         <div class="field center">
             <label class="question">What elements, items, or materials can you add to build anticipation?<br>
-            <span class="answer"><%= f.text_field :q39, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q39, autofocus: false %></span></label>
        </div>
         <div class="field center">
             <label class="question">What can you include in the packaging to make it share-able?<br><small>(Can you include some specific physical item or idea they will pass on to at least one friend)?</small>
-            <span class="answer"><%= f.text_field :q40, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q40, autofocus: false %></span></label>
        </div>
         <div class="field center">
             <label class="question">How does this process play into satisfying the fantasy and remind them that you are helping them be the person they want to be?<br>
-            <span class="answer"><%= f.text_field :q41, autofocus: true %></span></label>
+            <span class="answer"><%= f.text_field :q41, autofocus: false %></span></label>
        </div>              
      </div>
         <div class="center">
@@ -563,6 +580,7 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
         <br><br><p>
         If you are feeling lost, start at the beginning again. Look within. Everything starts with values. Everything ends with values.
         <br><br><br><br>
+        <small align="center">© Grant Wenzlau</small>
       </p>
      </div>
 
@@ -570,7 +588,7 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
 <hr>
 <div id="save" class="save-container center">
   <div class="field">
-    <label>To save your progress, entrer your email</label>  <%= f.email_field :email, autofocus: true %> 
+    <label>To save your progress, enter your email</label>  <%= f.email_field :email, autofocus: false %> 
   </div>
 
   <div class="field">
@@ -582,7 +600,7 @@ List as many as you can think of (and feel free to use a thesaurus).</small><br>
 
 
   <div class="actions field">
-    <%= f.submit "Save" %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
   </div>
 <% end %>
 </div>

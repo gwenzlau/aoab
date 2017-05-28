@@ -15,5 +15,5 @@
 //= require bootstrap
 //= require jquery
 //= require jquery_ujs
-//= require smooth
+//= require smooth.js
 //= require_tree .

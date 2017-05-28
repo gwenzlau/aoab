@@ -12,4 +12,8 @@ class Brand < ApplicationRecord
     }
   end
 
+  def to_param
+    name
+  end
+
 end

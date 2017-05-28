@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528170616) do
+ActiveRecord::Schema.define(version: 20170528214104) do
 
 # Could not dump table "brands" because of following StandardError
 #   Unknown type '' for column 'q2'
