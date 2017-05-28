@@ -249,3 +249,13 @@ div.venn .joined p {
 footer small {
 	font-size: 55%;
 }
+footer ul {
+    font-size: 11px;
+    display: -webkit-inline-box;
+    font-weight:300;
+}
+footer li {
+	    padding-right: 15px;
+	    padding-left: 15px;
+    display: inline;
+}
