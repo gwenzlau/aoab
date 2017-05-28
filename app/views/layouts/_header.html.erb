@@ -15,10 +15,9 @@
 			<% if brand_signed_in? %>
 				<li> <%= link_to(current_brand.name, brand_path(current_brand)) %></li>
 				<li> <%= link_to "Edit", edit_brand_registration_path %></li>
-	         <li>   <%= link_to "Logout", destroy_brand_session_path, method: :delete %></li>
-            <% else %>
-	          <li>  <%= link_to "Log in", new_brand_session_path, class: "btn btn-default" %></li>
-	         <li>	<%= link_to "Build your brand", new_brand_registration_path, class: "btn btn-primary" %></li>
+	      <li> <%= link_to "Logout", destroy_brand_session_path, method: :delete %></li>
+          <% else %>
+	       <li> <%= link_to "Log in", new_brand_session_path %></li>
     		 <% end %>
       </ul>   
      	
