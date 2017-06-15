@@ -112,4 +112,7 @@ protected
 
 
  end
+ def after_sign_in_path_for(brand)
+  current_brand
+end
 end
